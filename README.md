@@ -1,27 +1,27 @@
-# 🎓 StudentConnect
+# StudentConnect
 
 **StudentConnect** is a full-stack web application built using the **MERN stack** (MongoDB, Express.js, React.js, Node.js). It aims to provide a centralized platform for students to access a variety of academic and career-related resources.
 
 
-## 🚀 Features
+## Features
 
-- 📚 Access curated educational **resources**
-- 💼 Explore **internships** and **job** opportunities
-- 🗓️ Browse and register for **events** and **competitions**
-- 🧠 Receive **personalized content** based on selected interests
-- 🛡️ Secure user authentication using **JWT**
-- 📬 Email notifications for sign-up and activity
-- 🗨️ Discussion forums (optional module)
+- Access curated educational **resources**
+- Explore **internships** and **job** opportunities
+- Browse and register for **events** and **competitions**
+- Receive **personalized content** based on selected interests
+- Secure user authentication using **JWT**
+- Email notifications for sign-up and activity
+- Discussion forums (optional module)
 
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Frontend        | Backend              | Database       | Others                     |
 |-----------------|----------------------|----------------|----------------------------|
 | React.js        | Node.js + Express.js | MongoDB        | JWT, Nodemailer, Mongoose  |
 
 
-## 📁 Folder Structure (simplified)
+## Folder Structure (simplified)
 
 
 StudentConnect/
@@ -39,7 +39,7 @@ StudentConnect/
 
 ---
 
-## ⚙️ Getting Started
+## Getting Started
 
 ### 1. Clone the Repository
 
@@ -79,7 +79,7 @@ npm start
 ```
 
 
-## 🔐 Environment Variables (`/server/.env`)
+## Environment Variables (`/server/.env`)
 
 Make sure to set the following values:
 
@@ -88,7 +88,7 @@ Make sure to set the following values:
 * `EMAIL_USER` / `EMAIL_PASS` – for sending notifications
 
 
-## 📦 Dependencies (Backend)
+## Dependencies (Backend)
 
 ```bash
 express
