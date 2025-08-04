@@ -28,7 +28,7 @@
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/StudentConnect.git
+git clone https://github.com/balajiVada/StudentConnect.git
 cd StudentConnect
 ````
 
