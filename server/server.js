@@ -13,7 +13,7 @@ const eventRoutes = require('./routes/eventRoute.js');
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-    origin: process.env.FRONTEND_URL || 'http://localhost:3000',
+    origin: 'https://studentconnect-frontend.onrender.com' || 'http://localhost:3000',
     credentials: true
 }));
 
