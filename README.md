@@ -21,20 +21,6 @@
 | React.js        | Node.js + Express.js | MongoDB        | JWT, Nodemailer, Mongoose  |
 
 
-## Folder Structure (simplified)
-
-
-StudentConnect/
-├── client/              # React frontend (if included)
-├── server/              # Node.js backend
-│   ├── controllers/     # Business logic
-│   ├── models/          # Mongoose schemas
-│   ├── routes/          # API route definitions
-│   ├── utils/           # Helper functions
-│   ├── middlewares/     # Auth and other middleware
-│   └── .env             # Environment variables (excluded)
-├── README.md            # This file
-└── .gitignore
 
 
 ---
