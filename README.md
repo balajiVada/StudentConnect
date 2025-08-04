@@ -10,8 +10,6 @@
 - Browse and register for **events** and **competitions**
 - Receive **personalized content** based on selected interests
 - Secure user authentication using **JWT**
-- Email notifications for sign-up and activity
-- Discussion forums (optional module)
 
 
 ## Tech Stack
