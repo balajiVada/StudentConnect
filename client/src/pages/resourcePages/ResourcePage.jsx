@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import api from "../../services/api";
+import Loader from '../../components/common/Loader';
 import ResourceFilter from "./ResourceFilter";
 import ResourceCard from "./ResourceCard";
 import "./ResourcePage.css";
@@ -78,11 +79,7 @@ const ResourcePage = () => {
 
   if (loading) {
     return (
-      <div className="rp-container">
-        <div className="rp-loading">
-          <p>Loading resources...</p>
-        </div>
-      </div>
+      <Loader />
     );
   }
 

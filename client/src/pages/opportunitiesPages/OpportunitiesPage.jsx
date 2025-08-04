@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import api from "../../services/api";
+import Loader from '../../components/common/Loader';
 import "./OpportunitiesPage.css";
 import OpportunitiesFilter from "./OpportunityFilter";
 import OpportunityCard from "./OpportunityCard";
@@ -81,11 +82,7 @@ const CustOpportunitiesPage = () => {
 
   if (loading) {
     return (
-      <div className="ef-container">
-        <div className="loading-container">
-          <p>Loading opportunities...</p>
-        </div>
-      </div>
+      <Loader />
     );
   }
 
