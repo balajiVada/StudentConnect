@@ -1,0 +1,232 @@
+.of-overview {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  padding: 20px;
+}
+
+.of-sidebar {
+  width: 280px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* .of-filter-title {
+  font-size: 18px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.of-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.of-tag {
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  background: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.of-tag.active {
+  background-color: #444;
+  color: white;
+  border-color: #444;
+}
+ */
+
+
+
+.of-filter-title {
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #222;
+}
+
+.of-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.of-tag {
+  padding: 8px 14px;
+  border: 1px solid #aaa;
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  cursor: pointer;
+  text-align: left;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+
+
+.of-selected {
+  background-color: #007BFF;
+  color: white;
+  border-color: #007BFF;
+}
+
+
+
+
+.of-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.of-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.of-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.of-search-input {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 14px;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.of-results {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.of-count {
+  font-size: 14px;
+  color: #666;
+}
+
+.of-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 20px;
+}
+
+.of-card {
+  padding: 16px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+}
+
+.of-card-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.of-card-subtitle {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 8px;
+}
+
+.of-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.of-skill-tag {
+  background: #eef;
+  padding: 4px 10px;
+  border-radius: 14px;
+  font-size: 13px;
+}
+
+.of-posted-by {
+  font-size: 13px;
+  color: #999;
+}
+
+.of-empty {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.of-empty-icon {
+  font-size: 36px;
+  margin-bottom: 8px;
+}
+
+
+
+
+
+
+.ef-pagination {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ef-page-btn {
+  background-color: #eee;
+  border: 1px solid #ccc;
+  padding: 6px 12px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.ef-page-btn:hover {
+  background-color: #dcdcdc;
+}
+
+.ef-page-btn.active {
+  background-color: #4a90e2;
+  color: white;
+  font-weight: bold;
+  border: 1px solid #4a90e2;
+}
+
+
+.ef-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ef-star-badge {
+  font-size: 20px;
+  color: rgb(250, 218, 32);
+  margin-left: 10px;
+}
+
+
+
+
+
+.of-tag.active {
+  background-color: #007BFF;
+  color: white;
+  border-color: #007BFF;
+}
+
+
+.of-tag-group-title {
+  margin: 30px 10px 10px 10px;
+}

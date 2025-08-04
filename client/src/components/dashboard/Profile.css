@@ -1,0 +1,133 @@
+.p-dashboard-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background-color: #f8fafc;
+  min-height: 100vh;
+}
+
+.p-dashboard-welcome {
+  background-color: #1d4ed8;
+  color: white;
+  border-radius: 0.75rem;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+}
+
+.p-dashboard-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.p-dashboard-subtext {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.p-dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .p-dashboard-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .p-dashboard-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.p-dashboard-card-container {
+  background-color: white;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.p-dashboard-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.p-dashboard-card-subtitle {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin-bottom: 1rem;
+}
+
+.p-dashboard-card-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.p-dashboard-card {
+}
+
+.p-dashboard-card:hover {
+}
+
+.p-dashboard-detail {
+  color: #4b5563;
+  font-size: 0.95rem;
+}
+
+.p-dashboard-tags-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.p-dashboard-tag {
+  background-color: #dbeafe;
+  color: #1e40af;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.25rem 0.625rem;
+  border-radius: 0.25rem;
+  white-space: nowrap;
+}
+
+.p-dashboard-status {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.p-dashboard-indicator {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 9999px;
+  background-color: #22c55e;
+}
+
+.p-dashboard-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f8fafc;
+}
+
+.logout {
+  background-color: rgb(251, 29, 29);
+  color: white;
+  font-size: 15px;
+  padding: 10px 8px;
+  border-radius: 10px;
+}

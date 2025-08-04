@@ -1,0 +1,220 @@
+/* Overall container for the login card */
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+
+.l-card {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  max-width: 400px;
+  margin: 4rem auto;
+  padding: 2.5rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e0e0e0;
+}
+
+/* Header section of the card */
+.l-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.l-header h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 0.5rem;
+}
+
+.l-header p {
+  font-size: 1rem;
+  color: #666666;
+  margin: 0;
+}
+
+/* Form styling */
+.l-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.l-form-group {
+  margin-bottom: 1.5rem;
+}
+
+.l-form-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #555555;
+  margin-bottom: 0.5rem;
+}
+
+/* Input fields */
+.l-form-group input {
+  width: 90%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  color: #333333;
+}
+
+.l-form-group input::placeholder {
+  color: #a0a0a0;
+}
+
+.l-form-group input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+}
+
+.l-input-error {
+  border-color: #dc3545 !important;
+}
+
+.l-error-text {
+  color: #dc3545;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  display: block;
+}
+
+/* Error message for authentication */
+.l-alert.l-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  border: 1px solid #f5c6cb;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Login options section (Remember me and Forgot password) */
+.l-login-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.l-remember-option {
+  display: flex;
+  align-items: center;
+}
+
+.l-checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #a0a0a0;
+  border-radius: 4px;
+  margin-right: 8px;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.l-checkbox:checked {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.l-checkbox:checked::before {
+  content: "✓";
+  color: #ffffff;
+  font-size: 14px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.l-checkbox-label {
+  font-size: 0.9rem;
+  color: #555555;
+  cursor: pointer;
+  user-select: none;
+}
+
+.l-forgot-link {
+  color: #007bff;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.l-forgot-link:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+/* Submit button */
+.l-btn-primary {
+  width: 100%;
+  padding: 14px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.l-btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.l-btn-primary:disabled {
+  background-color: #a0a0a0;
+  cursor: not-allowed;
+}
+
+/* Loader inside the button */
+.l-loader {
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top: 3px solid #ffffff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: l-spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+/* Animation for the loader */
+@keyframes l-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* "Don't have an account?" text */
+.l-signup-text {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+  color: #666666;
+}
+
+.l-signup-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.l-signup-link:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
