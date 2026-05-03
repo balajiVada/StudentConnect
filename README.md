@@ -1,6 +1,6 @@
 # StudentConnect
 
-**StudentConnect** is a full-stack web application built using the **MERN stack** (MongoDB, Express.js, React.js, Node.js). It aims to provide a centralized platform for students to access a variety of academic and career-related resources.
+**StudentConnect** is a full-stack web application built using the **MERN stack** (MongoDB, Express.js, React.js, Node.js). It aims to provide a centralized platform for students to access a variety of academic and career-related resourcess.
 
 
 ## Features
