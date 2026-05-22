@@ -1,0 +1,94 @@
+
+.events-container {
+  background: linear-gradient(to bottom, #f9fafb, #ffffff);
+  padding: 3rem 1rem;
+}
+
+.events-heading {
+  font-size: 1.875rem;
+  font-weight: 700;
+  text-align: center;
+  color: #6b21a8;
+  margin-bottom: 2.5rem;
+}
+
+.events-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  -ms-overflow-style: none; /* IE/Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.events-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.event-slide {
+  flex-shrink: 0;
+  scroll-snap-align: center;
+  min-width: 100%;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .event-slide {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+}
+
+.event-card {
+  background-color: #f3e8ff;
+  border: 1px solid #d8b4fe;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.event-card:hover {
+  transform: scale(1.01);
+}
+
+.event-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #4c1d95;
+  margin-bottom: 1rem;
+}
+
+.event-description {
+  color: #374151;
+  margin-bottom: 1rem;
+}
+
+.event-meta {
+  font-size: 0.875rem;
+  color: #7e22ce;
+  margin-bottom: 0.25rem;
+}
+
+.event-meta span {
+  font-weight: 600;
+}
+
+.event-button {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: #7e22ce;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+}
+
+.event-button:hover {
+  background-color: #6b21a8;
+}

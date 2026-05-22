@@ -1,0 +1,108 @@
+/* PersonalizedOpportunities.css */
+
+.opportunities-section {
+  padding: 3rem 2rem;
+  background-color: #ffffff;
+}
+
+.opportunities-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  color: #1f2937; /* text-gray-800 */
+}
+
+.opportunities-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: stretch;
+}
+
+@media (min-width: 768px) {
+  .opportunities-list {
+    flex-direction: row;
+  }
+
+  .opportunity-card {
+    width: 33.3333%;
+  }
+}
+
+.opportunity-card {
+  background: linear-gradient(to bottom right, #ecfeff, #ffffff);
+  border: 1px solid #a5f3fc;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.opportunity-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+.opportunity-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.opportunity-role {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #155e75; /* text-cyan-800 */
+}
+
+.opportunity-company {
+  background-color: #cffafe;
+  color: #0e7490;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+}
+
+.opportunity-link {
+  font-size: 0.875rem;
+  color: #06b6d4;
+  text-decoration: none;
+}
+
+.opportunity-link:hover {
+  text-decoration: underline;
+}
+
+.opportunity-details {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  color: #4b5563;
+}
+
+.opportunity-details p {
+  margin-bottom: 0.25rem;
+}
+
+.opportunity-details span {
+  font-weight: 500;
+}
+
+.opportunity-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.opportunity-skill {
+  background-color: #0891b2;
+  color: white;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}

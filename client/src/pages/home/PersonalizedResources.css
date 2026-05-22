@@ -1,0 +1,86 @@
+/* PersonalizedResources.css */
+
+.resources-section {
+  padding: 3rem 2rem;
+  background: linear-gradient(to bottom right, #f8fafc, #f1f5f9); /* slate-50 to slate-100 */
+}
+
+.resources-heading {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #334155; /* slate-700 */
+}
+
+.resources-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: stretch;
+}
+
+@media (min-width: 768px) {
+  .resources-list {
+    flex-direction: row;
+  }
+
+  .resource-card {
+    width: 33.3333%;
+  }
+}
+
+.resource-card {
+  background-color: white;
+  border: 1px solid #e2e8f0; /* slate-200 */
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.resource-card:hover {
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+
+.resource-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1e293b; /* slate-800 */
+  margin-bottom: 0.5rem;
+}
+
+.resource-description {
+  font-size: 0.875rem;
+  color: #475569; /* slate-600 */
+  margin-bottom: 1rem;
+}
+
+.resource-link {
+  font-size: 0.875rem;
+  color: #06b6d4; /* cyan-600 */
+  text-decoration: underline;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.resource-link:hover {
+  color: #075985; /* cyan-800 */
+}
+
+.resource-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.resource-tag {
+  font-size: 0.75rem;
+  font-weight: 500;
+  background-color: #cffafe; /* cyan-100 */
+  color: #0e7490; /* cyan-700 */
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+}

@@ -1,0 +1,360 @@
+/* Overall container for the signup card */
+.su-card {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  max-width: 600px;
+  margin: 4rem auto;
+  padding: 2.5rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e0e0e0;
+}
+
+/* Header section of the card */
+.su-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.su-header h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 0.5rem;
+}
+
+.su-header p {
+  font-size: 1rem;
+  color: #666666;
+  margin: 0;
+}
+
+/* Step Wizard Section */
+.su-step-wizard {
+  margin-bottom: 2.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.su-progress-container {
+  position: relative;
+  width: 100%;
+}
+
+.su-progress-bar {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 4px;
+  background-color: #007bff;
+  transform: translateY(-50%);
+  transition: width 0.3s ease;
+  z-index: 1;
+  border-radius: 2px;
+}
+
+.su-step-wizard-list {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  z-index: 2;
+}
+
+.su-step-wizard-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  flex: 1;
+}
+
+.su-step-wizard-item::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #e0e0e0;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+.su-step-wizard-item:first-child::before {
+  left: 50%;
+  width: 50%;
+}
+
+.su-step-wizard-item:last-child::before {
+  width: 50%;
+}
+
+.su-progress-count {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #e9ecef;
+  color: #6c757d;
+  font-weight: 600;
+  border: 2px solid #e9ecef;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.su-progress-label {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #6c757d;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+.su-completed-item .su-progress-count {
+  background-color: #007bff;
+  color: #ffffff;
+  border-color: #007bff;
+}
+
+.su-completed-item .su-progress-label {
+  color: #333333;
+}
+
+.su-current-item .su-progress-count {
+  background-color: #007bff;
+  color: #ffffff;
+  border-color: #007bff;
+}
+
+.su-current-item .su-progress-label {
+  color: #007bff;
+}
+
+/* Form styling */
+.su-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.su-row {
+  display: flex;
+  gap: 10%;
+}
+
+.su-row > .su-form-group {
+  flex: 1;
+}
+
+.su-form-group {
+  margin-bottom: 1.5rem;
+}
+
+.su-form-group label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #555555;
+  margin-bottom: 0.5rem;
+}
+
+/* Input fields */
+.su-form-group input {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  color: #333333;
+}
+
+.su-form-group input::placeholder {
+  color: #a0a0a0;
+}
+
+.su-form-group input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+}
+
+.su-input-error {
+  border-color: #dc3545 !important;
+}
+
+.su-error-text {
+  color: #dc3545;
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  display: block;
+}
+
+/* Alert messages */
+.su-alert {
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.su-alert.su-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+.su-alert.su-success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+/* Interest selection */
+.su-custom-interest-input {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.su-custom-interest-input input {
+  flex-grow: 1;
+}
+
+.su-add-interest-btn {
+  padding: 0.75rem 1.25rem;
+  border: none;
+  background-color: #007bff;
+  color: #ffffff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.su-add-interest-btn:hover {
+  background-color: #0056b3;
+}
+
+.su-add-interest-btn:disabled {
+  background-color: #a0a0a0;
+  cursor: not-allowed;
+}
+
+.su-interests-container h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #495057;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.su-interests-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.su-interest-btn {
+  background-color: #e9ecef;
+  color: #495057;
+  border: 1px solid #ced4da;
+  border-radius: 20px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.su-interest-btn.su-active {
+  background-color: #007bff;
+  color: #ffffff;
+  border-color: #007bff;
+}
+
+/* Button group for navigation */
+.su-button-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.su-btn-primary {
+  flex: 1;
+  padding: 14px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.su-btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.su-btn-primary:disabled {
+  background-color: #a0a0a0;
+  cursor: not-allowed;
+}
+
+.su-btn-secondary {
+  flex: 1;
+  padding: 14px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #495057;
+  background-color: #e9ecef;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.su-btn-secondary:hover {
+  background-color: #d2d7db;
+}
+
+/* Loader inside the button */
+.su-loader {
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top: 3px solid #ffffff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: su-spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+/* Animation for the loader */
+@keyframes su-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* "Already have an account?" text */
+.su-signin-text {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  color: #666666;
+}
+
+.su-signin-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.su-signin-link:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}

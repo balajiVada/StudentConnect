@@ -1,0 +1,64 @@
+
+.hero-banner {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  background-image: url('https://img.freepik.com/free-vector/modern-banner-with-abstract-low-poly-design_1048-14340.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.hero-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.hero-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  line-height: 1.375;
+  letter-spacing: 0.025em;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.hero-title span {
+  color: #22d3ee; /* cyan-400 */
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+}
+
+.hero-button {
+  background-color: #06b6d4;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.hero-button:hover {
+  background-color: #0891b2;
+}

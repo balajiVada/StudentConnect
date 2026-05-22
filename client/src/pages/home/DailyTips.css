@@ -1,0 +1,71 @@
+/* DailyTips.css */
+
+.daily-tips-container {
+  padding: 3rem 1rem;
+  background: linear-gradient(to bottom right, #ffffff, #f3f4f6, #e5e7eb);
+}
+
+.daily-tips-heading {
+  font-size: 1.875rem;
+  font-weight: 700;
+  text-align: center;
+  color: #1f2937;
+  margin-bottom: 2.5rem;
+  text-decoration: underline;
+  text-decoration-color: #2dd4bf;
+  text-decoration-thickness: 4px;
+  text-underline-offset: 8px;
+}
+
+.daily-tips-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .daily-tips-wrapper {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.tip-card {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  border: 1px solid #e5e7eb;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.tip-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+.tip-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #0f766e;
+  margin-bottom: 0.5rem;
+}
+
+.tip-description {
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+
+.tip-link {
+  color: #14b8a6;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.tip-link:hover {
+  color: #0f766e;
+}
