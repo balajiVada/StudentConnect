@@ -1,0 +1,80 @@
+/* Navbar.css - Figma Style */
+
+.navbar {
+  width: 100%;
+  background-color: var(--color-block-navy);
+  padding: 0 24px;
+  height: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--color-primary);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-title {
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  color: var(--color-on-primary);
+}
+
+.navbar-links {
+  display: none;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .navbar-links {
+    display: flex;
+  }
+}
+
+.navbar-links a {
+  color: var(--color-on-primary);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.2s ease;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+}
+
+.navbar-links a:hover {
+  opacity: 0.8;
+}
+
+.navbar-links a.active-link {
+  color: var(--color-block-lime);
+  border-bottom: 2px solid var(--color-block-lime);
+}
+
+.navbar-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.profile-button, .dashboard-button {
+  background-color: var(--color-canvas);
+  color: var(--color-ink);
+  border: 2px solid var(--color-primary);
+  padding: 8px 18px 10px;
+  border-radius: var(--rounded-pill);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.profile-button:hover, .dashboard-button:hover {
+  background-color: var(--color-block-lime);
+  color: var(--color-ink);
+}

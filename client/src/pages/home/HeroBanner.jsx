@@ -4,12 +4,14 @@ import './HeroBanner.css';
 const HeroBanner = () => {
   return (
     <div className="hero-banner">
-      {/* Content */}
       <div className="hero-content">
-        <h2 className="hero-title">
-          Empowering Students with Resources and <span>Greater Opportunities</span>
+        <h2 className="display-xl hero-title">
+          Connect.<br />Learn. Grow.
         </h2>
-        <button className="hero-button">Learn More</button>
+        <p className="subhead hero-subtitle">
+          Your all-in-one platform for campus resources, events, and career opportunities.
+        </p>
+        <button className="pill-btn pill-primary">Learn More</button>
       </div>
     </div>
   );

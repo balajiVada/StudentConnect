@@ -43,8 +43,9 @@ const ResetPassword = () => {
   };
 
   return (
-    <div className="re-card">
-      <div className="re-header">
+    <div className="re-container">
+      <div className="re-card figma-card">
+        <div className="re-header">
         <h3>Reset Password</h3>
         <p>Enter your email, token, and new password</p>
       </div>
@@ -130,7 +131,7 @@ const ResetPassword = () => {
           )}
         </div>
 
-        <button className="re-btn-primary" type="submit" disabled={loading || success}>
+        <button className="re-btn-primary pill-btn pill-primary" type="submit" disabled={loading || success}>
           {loading ? <div className="re-loader"></div> : 'Reset Password'}
         </button>
 
@@ -144,6 +145,7 @@ const ResetPassword = () => {
           </Link>
         </div>
       </form>
+      </div>
     </div>
   );
 };

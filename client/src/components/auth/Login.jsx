@@ -36,11 +36,12 @@ const Login = () => {
   };
 
   return (
-    <div className="l-card">
-      <div className="l-header">
-        <h3>Login to Your Account</h3>
-        <p>Enter your credentials to access your account</p>
-      </div>
+    <div className="l-container">
+      <div className="l-card figma-card">
+        <div className="l-header">
+          <h3>Login to Your Account</h3>
+          <p>Enter your credentials to access your account</p>
+        </div>
 
       {authError && <div className="l-alert l-error">{authError}</div>}
 
@@ -103,7 +104,7 @@ const Login = () => {
           </Link>
         </div>
 
-        <button className="l-btn-primary" type="submit" disabled={loading}>
+        <button className="l-btn-primary pill-btn pill-primary" type="submit" disabled={loading}>
           {loading ? (
             <div className="l-loader"></div>
           ) : (
@@ -117,6 +118,7 @@ const Login = () => {
         <Link to="/signup" className="l-signup-link" onClick={() => setError(null)}>
           Sign Up
         </Link>
+      </div>
       </div>
     </div>
   );

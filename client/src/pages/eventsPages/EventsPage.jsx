@@ -41,7 +41,6 @@ const EventsPage = () => {
 
   return (
     <div className="ef-container">
-      <h2 className="ef-title">Explore Exciting Events</h2>
       <div className="ef-content">
         <div className="ef-sidebar">
           <EventsFilter

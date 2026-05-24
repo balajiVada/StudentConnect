@@ -1,206 +1,248 @@
-/* Layout */
-.ef-container {
-  padding: 30px;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f9f9fb;
-  min-height: 100vh;
+/* EventsPage.css - Figma Style */
+.ef-hero {
+  background-color: var(--color-block-coral);
+  border-bottom: 2px solid var(--color-primary);
+  padding: 80px 24px;
 }
 
-.ef-title {
-  font-size: 28px;
-  text-align: center;
-  margin-bottom: 30px;
-  color: #333;
+.ef-hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.ef-container {
+  background-color: var(--color-canvas);
+  min-height: 100vh;
 }
 
 .ef-content {
   display: flex;
-  gap: 20px;
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 64px 24px;
+}
+
+@media (max-width: 768px) {
+  .ef-content {
+    flex-direction: column;
+  }
 }
 
 .ef-sidebar {
   width: 280px;
-  background-color: #ffffff;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  flex-shrink: 0;
 }
 
-/* Filter */
-.ef-filter-title {
-  font-size: 18px;
-  margin-bottom: 12px;
-  color: #222;
-}
-
-.ef-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.ef-tag {
-  padding: 8px 14px;
-  border: 1px solid #aaa;
-  background-color: #f0f0f0;
-  border-radius: 20px;
-  cursor: pointer;
-  text-align: left;
-  font-size: 14px;
-  transition: 0.3s ease;
-}
-
-
-
-.ef-tag:hover {
-  background-color: #e0e0e0;
-}
-
-.ef-selected {
-  background-color: #007BFF;
-  color: white;
-  border-color: #007BFF;
-}
-
-/* Main content */
 .ef-main {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 32px;
 }
 
 .ef-search-bar {
-  padding: 12px 16px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  font-size: 16px;
+  padding: 16px 24px;
+  border: 2px solid var(--color-primary);
+  border-radius: var(--rounded-md);
+  font-size: 18px;
+  font-family: 'Inter', sans-serif;
   width: 100%;
 }
 
-/* Cards */
+.ef-search-bar:focus {
+  outline: none;
+  box-shadow: 4px 4px 0px var(--color-primary);
+}
+
 .ef-events-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 24px;
 }
 
 .ef-card {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border: 2px solid var(--color-primary);
+  box-shadow: 4px 4px 0px var(--color-primary);
+  border-radius: var(--rounded-lg);
+  padding: 0;
+  transition: all 0.2s ease;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  overflow: hidden;
+}
+
+.ef-card:nth-child(4n+1) { background-color: var(--color-block-cream); }
+.ef-card:nth-child(4n+2) { background-color: var(--color-block-pink); }
+.ef-card:nth-child(4n+3) { background-color: var(--color-block-mint); }
+.ef-card:nth-child(4n+0) { background-color: var(--color-surface-soft); }
+
+.ef-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px var(--color-primary);
+}
+
+.ef-card-header {
+  background-color: var(--color-block-navy);
+  color: var(--color-on-primary);
+  padding: 12px;
+  border-bottom: 2px solid var(--color-primary);
+  text-align: center;
+}
+
+.ef-card:nth-child(even) .ef-card-header {
+  background-color: var(--color-block-lime);
+  color: var(--color-ink);
+}
+.ef-card:nth-child(3n) .ef-card-header {
+  background-color: var(--color-accent-magenta);
+  color: var(--color-on-primary);
+}
+
+.ef-card-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .ef-card-title {
   font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 10px;
-  color: #333;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--color-ink);
+  line-height: 1.2;
 }
 
 .ef-card-sub {
-  font-size: 14px;
-  color: #555;
-  margin-bottom: 4px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--color-ink);
+  margin-bottom: 8px;
 }
 
 .ef-card-desc {
   font-size: 14px;
-  margin: 12px 0;
-  color: #444;
+  font-weight: 300;
+  margin-bottom: 16px;
+  flex-grow: 1;
 }
 
 .ef-card-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
-  margin-bottom: 12px;
+  gap: 8px;
+  margin-bottom: 16px;
 }
 
 .ef-card-tag {
-  background-color: #e6e6e6;
-  border-radius: 12px;
-  padding: 4px 8px;
+  background-color: var(--color-surface-soft);
+  border: 1px solid var(--color-primary);
+  padding: 4px 12px;
+  border-radius: var(--rounded-pill);
+  font-family: 'JetBrains Mono', monospace;
   font-size: 12px;
-}
-
-.ef-card-link {
-  background-color: #007BFF;
-  color: white;
-  padding: 8px 14px;
-  text-decoration: none;
-  border-radius: 8px;
-  text-align: center;
-  font-size: 14px;
-  transition: background 0.2s ease;
-}
-
-.ef-card-link:hover {
-  background-color: #0056cc;
-}
-
-.ef-no-results {
-  text-align: center;
-  font-size: 16px;
-  color: #888;
-  grid-column: 1 / -1;
-}
-
-
-
-
-
-.ef-pagination {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  margin-top: 20px;
-}
-
-.ef-page-btn {
-  padding: 8px 12px;
-  background-color: #f0f0f0;
-  border: none;
-  cursor: pointer;
-  font-weight: 500;
-  border-radius: 5px;
-  transition: 0.3s;
-}
-
-.ef-page-btn:hover {
-  background-color: #d6d6d6;
-}
-
-.ef-active-page {
-  background-color: #5c8df6;
-  color: white;
+  font-weight: 700;
 }
 
 .ef-card-actions {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 12px;
+}
+
+.ef-card-link {
+  font-weight: 700;
+  text-decoration: underline;
+  color: var(--color-ink);
+  font-size: 16px;
 }
 
 .ef-save-button {
   background: none;
   border: none;
   cursor: pointer;
-  font-size: 1.4rem;
-  color: #666;
-  transition: color 0.3s ease;
+  font-size: 24px;
+  color: var(--color-primary);
+  transition: transform 0.2s ease;
 }
 
 .ef-save-button:hover {
-  color: #000;
+  transform: scale(1.1);
 }
 
-.ef-card-link {
-  text-decoration: none;
-  font-weight: bold;
+.ef-no-results {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  grid-column: 1 / -1;
+  padding: 48px;
+}
+
+.ef-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 48px;
+}
+
+.ef-page-btn {
+  padding: 8px 16px;
+  border: 2px solid var(--color-primary);
+  background-color: var(--color-canvas);
+  cursor: pointer;
+  font-weight: 700;
+  border-radius: var(--rounded-pill);
+  transition: all 0.2s;
+}
+
+.ef-page-btn:hover {
+  background-color: var(--color-surface-soft);
+}
+
+.ef-page-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.ef-active-page {
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
+}
+
+/* Filter styles */
+.ef-filter-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.ef-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.ef-tag {
+  padding: 8px 16px;
+  border: 2px solid var(--color-primary);
+  background-color: var(--color-canvas);
+  border-radius: var(--rounded-pill);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.ef-tag:hover {
+  background-color: var(--color-surface-soft);
+}
+
+.ef-selected {
+  background-color: var(--color-primary);
+  color: var(--color-on-primary);
 }

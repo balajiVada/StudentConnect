@@ -88,7 +88,6 @@ const ResourcePage = () => {
 
   return (
     <div className="rp-container">
-      <h2 className="rp-title">Explore Learning Resources</h2>
       <div className="rp-content">
         <div className="rp-sidebar">
           <ResourceFilter

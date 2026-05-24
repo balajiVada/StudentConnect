@@ -1,8 +1,8 @@
 
 
 import React from "react";
-import "../home/Homepage.css";
-import { Link } from "react-router-dom";
+import "./Navbar.css";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   // Get user from localStorage
@@ -13,18 +13,17 @@ const Navbar = () => {
     <nav className="navbar">
       {/* Logo */}
       <div className="navbar-logo">
-        {/* <img src="/logo.png" alt="logo" /> */}
-        <span className="navbar-title">StudentConnect</span>
+        <Link to="/homepage" style={{ textDecoration: 'none' }}>
+          <span className="navbar-title">StudentConnect</span>
+        </Link>
       </div>
 
       {/* Navigation Links */}
       <div className="navbar-links">
-        <Link to="/homepage">Home</Link>
-        <Link to="/customresource">Resources</Link>
-        <Link to="/customeopportunity">Opportunities</Link>
-        <Link to="/customevents">Events</Link>
-        {/* <a href="/tips">Tips</a>
-        <a href="/learningpaths">Learning Paths</a> */}
+        <NavLink to="/homepage" className={({isActive}) => isActive ? "active-link" : ""}>Home</NavLink>
+        <NavLink to="/customresource" className={({isActive}) => isActive ? "active-link" : ""}>Resources</NavLink>
+        <NavLink to="/customeopportunity" className={({isActive}) => isActive ? "active-link" : ""}>Opportunities</NavLink>
+        <NavLink to="/customevents" className={({isActive}) => isActive ? "active-link" : ""}>Events</NavLink>
       </div>
 
       {/* Profile/Login */}

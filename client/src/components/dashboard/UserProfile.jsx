@@ -39,23 +39,27 @@ const Dashboard = () => {
   return (
     <div className="p-dashboard-wrapper">
       <div className="p-dashboard-welcome">
-        <div className="profile-name">
-          <h1 className="p-dashboard-heading">Welcome, {user.firstname}!</h1>
-          <p className="p-dashboard-subtext">
-            This is your personal dashboard where you can manage your profile
-            and preferences.
-          </p>
-        </div>
-        <div>
-          <button className="logout" onClick={handleLogout}>
+        <div className="p-dashboard-welcome-content">
+          <div className="profile-name">
+            <span className="eyebrow">Dashboard</span>
+            <h1 className="display-lg p-dashboard-heading">Welcome, {user.firstname}!</h1>
+            <p className="p-dashboard-subtext">
+              This is your personal dashboard where you can manage your profile
+              and preferences.
+            </p>
+          </div>
+          <div>
+          <button className="pill-btn pill-magenta" onClick={handleLogout}>
             Logout
           </button>
         </div>
+        </div>
       </div>
 
-      <div className="p-dashboard-grid">
-        {/* Your Profile Card */}
-        <div className="p-dashboard-card-container p-dashboard-card">
+      <div className="p-dashboard-content">
+        <div className="p-dashboard-grid">
+          {/* Your Profile Card */}
+          <div className="p-dashboard-card figma-card card-cream">
           <h2 className="p-dashboard-card-title">Your Profile</h2>
           <p className="p-dashboard-card-subtitle">
             Personal information and qualifications
@@ -74,7 +78,7 @@ const Dashboard = () => {
         </div>
 
         {/* Your Interests Card */}
-        <div className="p-dashboard-card-container p-dashboard-card">
+        <div className="p-dashboard-card figma-card card-pink">
           <h2 className="p-dashboard-card-title">Your Interests</h2>
           <p className="p-dashboard-card-subtitle">
             Topics you are interested in
@@ -91,7 +95,7 @@ const Dashboard = () => {
           </div>
         </div>
 
-        <div className="p-dashboard-card-container p-dashboard-card">
+        <div className="p-dashboard-card figma-card card-lime">
           <h2 className="p-dashboard-card-title">Account Status</h2>
           <p className="p-dashboard-card-subtitle">Your account information</p>
           <div className="p-dashboard-card-content">
@@ -114,6 +118,7 @@ const Dashboard = () => {
           <p className="p-dashboard-detail">No recent activity to display.</p>
         </div>
       </div> */}
+      </div>
     </div>
   );
 };

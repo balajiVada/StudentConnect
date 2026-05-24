@@ -11,36 +11,41 @@ const EventCard = ({ event }) => {
 
   return (
     <div className="ef-card">
-      <h3 className="ef-card-title">{event.title}</h3>
-      <p className="ef-card-sub"><strong>Date:</strong> {new Date(event.eventDate).toLocaleDateString()}</p>
-      <p className="ef-card-sub"><strong>Register by:</strong> {new Date(event.registrationDeadline).toLocaleDateString()}</p>
-      <p className="ef-card-sub"><strong>Location:</strong> {event.location}</p>
-      <p className="ef-card-sub"><strong>Organizer:</strong> {event.organizer}</p>
-      <p className="ef-card-desc">{event.description}</p>
-
-      <div className="ef-card-tags">
-        {event.tags.map(tag => (
-          <span key={tag} className="ef-card-tag">{tag}</span>
-        ))}
+      <div className="ef-card-header">
+         <span className="font-mono text-sm uppercase font-bold block mb-1">Date</span>
+         <span className="text-3xl font-black">{new Date(event.eventDate).toLocaleDateString()}</span>
       </div>
+      <div className="ef-card-body">
+        <h3 className="ef-card-title">{event.title}</h3>
+        <p className="ef-card-sub"><strong>Register by:</strong> {new Date(event.registrationDeadline).toLocaleDateString()}</p>
+        <p className="ef-card-sub"><strong>Location:</strong> {event.location}</p>
+        <p className="ef-card-sub"><strong>Organizer:</strong> {event.organizer}</p>
+        <p className="ef-card-desc">{event.description}</p>
 
-      <div className="ef-card-actions">
-        <a
-          href={event.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="ef-card-link"
-        >
-          View Event
-        </a>
+        <div className="ef-card-tags">
+          {event.tags.map(tag => (
+            <span key={tag} className="ef-card-tag">{tag}</span>
+          ))}
+        </div>
 
-        <button
-          className="ef-save-button"
-          onClick={toggleSave}
-          aria-label={isSaved ? 'Unsave Event' : 'Save Event'}
-        >
-          {isSaved ? <BsBookmarkFill /> : <BsBookmark />}
-        </button>
+        <div className="ef-card-actions">
+          <a
+            href={event.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ef-card-link"
+          >
+            View Event
+          </a>
+
+          <button
+            className="ef-save-button"
+            onClick={toggleSave}
+            aria-label={isSaved ? 'Unsave Event' : 'Save Event'}
+          >
+            {isSaved ? <BsBookmarkFill /> : <BsBookmark />}
+          </button>
+        </div>
       </div>
     </div>
   );

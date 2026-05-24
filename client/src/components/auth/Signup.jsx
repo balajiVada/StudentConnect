@@ -139,8 +139,9 @@ const Signup = () => {
   const progressPercentage = (step / (stepLabels.length - 1)) * 100;
 
   return (
-    <div className="su-card">
-      <div className="su-header">
+    <div className="su-container">
+      <div className="su-card figma-card">
+        <div className="su-header">
         <h3>Create an Account</h3>
         <p>Join our community and start your journey</p>
       </div>
@@ -387,14 +388,14 @@ const Signup = () => {
         <div className="su-button-group">
           {step > 0 && (
             <button
-              className="su-btn-secondary"
+              className="su-btn-secondary pill-btn pill-secondary"
               onClick={handlePrev}
               type="button"
             >
               Previous
             </button>
           )}
-          <button className="su-btn-primary" type="submit" disabled={loading}>
+          <button className="su-btn-primary pill-btn pill-primary" type="submit" disabled={loading}>
             {loading ? (
               <div className="su-loader"></div>
             ) : step === stepFields.length - 1 ? (
@@ -411,6 +412,7 @@ const Signup = () => {
         <Link to="/login" className="su-signin-link">
           Sign In
         </Link>
+      </div>
       </div>
     </div>
   );

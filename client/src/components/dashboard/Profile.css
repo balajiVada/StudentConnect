@@ -1,119 +1,134 @@
+/* Profile.css - Figma Style */
+
 .p-dashboard-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  padding: 1.5rem;
-  background-color: #f8fafc;
+  background-color: var(--color-canvas);
   min-height: 100vh;
 }
 
 .p-dashboard-welcome {
-  background-color: #1d4ed8;
-  color: white;
-  border-radius: 0.75rem;
-  padding: 1.5rem 2rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: var(--color-block-navy);
+  color: var(--color-on-primary);
+  border-bottom: 2px solid var(--color-primary);
+  padding: 80px 24px;
+}
+
+.p-dashboard-welcome-content {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
+}
+
+@media (max-width: 768px) {
+  .p-dashboard-welcome-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+  }
 }
 
 .p-dashboard-heading {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  color: var(--color-on-primary);
 }
 
 .p-dashboard-subtext {
-  font-size: 1.1rem;
-  line-height: 1.5;
+  font-size: 20px;
+  font-weight: 300;
+  opacity: 0.8;
+  max-width: 600px;
+}
+
+.p-dashboard-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 64px 24px;
 }
 
 .p-dashboard-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-}
-
-@media (min-width: 768px) {
-  .p-dashboard-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .p-dashboard-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-.p-dashboard-card-container {
-  background-color: white;
-  border-radius: 0.75rem;
-  padding: 1.5rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.p-dashboard-card-title {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #1f2937;
-  margin-bottom: 0.5rem;
-}
-
-.p-dashboard-card-subtitle {
-  font-size: 0.9rem;
-  color: #6b7280;
-  margin-bottom: 1rem;
-}
-
-.p-dashboard-card-content {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 32px;
 }
 
 .p-dashboard-card {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
-.p-dashboard-card:hover {
+.card-cream { background-color: var(--color-block-cream); }
+.card-pink { background-color: var(--color-block-pink); }
+.card-lime { background-color: var(--color-block-lime); }
+
+.p-dashboard-card-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-ink);
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.p-dashboard-card-subtitle {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-ink);
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.p-dashboard-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
 }
 
 .p-dashboard-detail {
-  color: #4b5563;
-  font-size: 0.95rem;
+  font-size: 16px;
+  color: var(--color-ink);
+  line-height: 1.5;
+}
+
+.p-dashboard-detail strong {
+  font-weight: 700;
 }
 
 .p-dashboard-tags-wrapper {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 8px;
 }
 
 .p-dashboard-tag {
-  background-color: #dbeafe;
-  color: #1e40af;
-  font-size: 0.75rem;
-  font-weight: 500;
-  padding: 0.25rem 0.625rem;
-  border-radius: 0.25rem;
-  white-space: nowrap;
+  background-color: var(--color-canvas);
+  border: 1px solid var(--color-primary);
+  padding: 6px 16px;
+  border-radius: var(--rounded-pill);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-ink);
 }
 
 .p-dashboard-status {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 12px;
+  margin-bottom: 8px;
 }
 
 .p-dashboard-indicator {
-  width: 0.75rem;
-  height: 0.75rem;
-  border-radius: 9999px;
-  background-color: #22c55e;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--color-semantic-success);
+  border: 2px solid var(--color-primary);
 }
 
 .p-dashboard-loader {
@@ -121,13 +136,5 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #f8fafc;
-}
-
-.logout {
-  background-color: rgb(251, 29, 29);
-  color: white;
-  font-size: 15px;
-  padding: 10px 8px;
-  border-radius: 10px;
+  background-color: var(--color-canvas);
 }

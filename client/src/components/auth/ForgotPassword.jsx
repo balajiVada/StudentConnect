@@ -37,8 +37,9 @@ const ForgotPassword = () => {
   };
 
   return (
-    <div className="fp-card">
-      <div className="fp-header">
+    <div className="fp-container">
+      <div className="fp-card figma-card">
+        <div className="fp-header">
         <h3>Forgot Password</h3>
         <p>Enter your email and we'll send you a token to reset your password</p>
       </div>
@@ -51,7 +52,7 @@ const ForgotPassword = () => {
             Reset token sent! Check your email for the token.
           </div>
           <button
-            className="fp-btn-primary"
+            className="fp-btn-primary pill-btn pill-primary"
             onClick={() => {
               setError(null);
               navigate('/reset-password');
@@ -89,7 +90,7 @@ const ForgotPassword = () => {
             )}
           </div>
 
-          <button className="fp-btn-primary" type="submit" disabled={loading}>
+          <button className="fp-btn-primary pill-btn pill-primary" type="submit" disabled={loading}>
             {loading ? (
               <div className="fp-loader"></div>
             ) : (
@@ -108,6 +109,7 @@ const ForgotPassword = () => {
           </div>
         </form>
       )}
+      </div>
     </div>
   );
 };

@@ -81,7 +81,7 @@ const CustOpportunitiesPage = () => {
 
   if (loading) {
     return (
-      <div className="ef-container">
+      <div className="opp-container">
         <div className="loading-container">
           <p>Loading opportunities...</p>
         </div>
@@ -90,27 +90,28 @@ const CustOpportunitiesPage = () => {
   }
 
   return (
-    <div className="ef-container">
-      <h2 className="ef-title">Opportunities For You</h2>
-      <div className="ef-content">
-        <OpportunitiesFilter
-          opportunities={opportunities}
-          activeTags={activeTags}
-          setActiveTags={setActiveTags}
-        />
+    <div className="opp-container">
+      <div className="opp-content">
+        <div className="opp-sidebar">
+          <OpportunitiesFilter
+            opportunities={opportunities}
+            activeTags={activeTags}
+            setActiveTags={setActiveTags}
+          />
+        </div>
 
-        <div className="ef-main">
+        <div className="opp-main">
           <input
             type="text"
             placeholder="🔍 Search opportunities by title..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="ef-search-bar"
+            className="opp-search-bar"
           />
 
-          <div className="ef-events-grid">
+          <div className="opp-events-grid">
             {paginatedOpportunities.length === 0 ? (
-              <p className="ef-no-results">
+              <p className="opp-no-results">
                 No opportunities match your filters.
               </p>
             ) : (
@@ -124,9 +125,9 @@ const CustOpportunitiesPage = () => {
           </div>
 
           {totalPages > 1 && (
-            <div className="ef-pagination">
+            <div className="opp-pagination">
               <button
-                className="ef-page-btn"
+                className="opp-page-btn"
                 onClick={() =>
                   setCurrentPage((prev) => Math.max(prev - 1, 1))
                 }
@@ -138,7 +139,7 @@ const CustOpportunitiesPage = () => {
               {[...Array(totalPages)].map((_, idx) => (
                 <button
                   key={idx}
-                  className={`ef-page-btn ${
+                  className={`opp-page-btn ${
                     currentPage === idx + 1 ? "active" : ""
                   }`}
                   onClick={() => setCurrentPage(idx + 1)}
@@ -148,7 +149,7 @@ const CustOpportunitiesPage = () => {
               ))}
 
               <button
-                className="ef-page-btn"
+                className="opp-page-btn"
                 onClick={() =>
                   setCurrentPage((prev) => Math.min(prev + 1, totalPages))
                 }
