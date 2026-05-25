@@ -27,6 +27,11 @@ app.use(cors({
 // ... your other routes, error handling, app.listen...
 
 
+// Health check route
+app.get('/api/health', (req, res) => {
+    res.status(200).json({ status: 'ok', message: 'Backend is alive!' });
+});
+
 app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/resources', resourceRoutes);
